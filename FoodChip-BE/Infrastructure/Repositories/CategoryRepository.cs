@@ -20,5 +20,11 @@ namespace Infrastructure.Repositories
             return await _context.Categories.AsNoTracking()
                 .ToListAsync(ct);
         }
+
+        public async Task<Category?> GetById(int id, CancellationToken ct)
+        {
+            return await _context.Categories.AsNoTracking()
+                .FirstOrDefaultAsync(x => x.Id == id, ct);
+        }
     }
 }

@@ -20,5 +20,11 @@ namespace Infrastructure.Repositories
             return await _context.CookingMethods.AsNoTracking()
                 .ToListAsync(ct);
         }
+
+        public async Task<CookingMethod?> GetById(int id, CancellationToken ct)
+        {
+            return await _context.CookingMethods.AsNoTracking()
+                .FirstOrDefaultAsync(x => x.Id == id, ct);
+        }
     }
 }

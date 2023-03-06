@@ -5,6 +5,7 @@ using MediatR;
 using System.Reflection;
 using Application.Interfaces;
 using Infrastructure.Repositories;
+using FoodChip_BE.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,9 @@ builder.Services.AddScoped<ICookingMethodRepository, CookingMethodRepository>();
 builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 
 var app = builder.Build();
+
+//Exception Middleware
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
