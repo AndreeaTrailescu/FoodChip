@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Infrastructure.SeedData;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistence
@@ -69,6 +70,9 @@ namespace Infrastructure.Persistence
                 .HasForeignKey(c => c.IngredientId);
             });
 
+
+            //seeding data
+            modelBuilder.SeedData();
         }
     }
 }

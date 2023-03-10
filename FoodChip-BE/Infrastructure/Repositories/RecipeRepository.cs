@@ -1,6 +1,6 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
-using Application.Recipes.Queries;
+using Application.Recipes.Queries.GetFiltered;
 using Domain;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +17,34 @@ namespace Infrastructure.Repositories
             _context = context;
         }
 
+        public async Task<RecipeReadModel?> GetById(int recipeId, CancellationToken ct)
+        {
+            var ingredients = from ir in _context.RecipeIngredients.AsNoTracking().Where(x => x.RecipeId == recipeId)
+                              join ingredient in _context.Ingredients.AsNoTracking()
+                              on ir.IngredientId equals ingredient.Id
+                              select ingredient;
+
+            var recipe = from rec in _context.Recipes.AsNoTracking().Where(x => x.Id == recipeId)
+                         join category in _context.Categories.AsNoTracking()
+                         on rec.CategoryId equals category.Id
+                         join cookingMethod in _context.CookingMethods.AsNoTracking()
+                         on rec.CookingMethodId equals cookingMethod.Id
+                         select new RecipeReadModel
+                         {
+                             Id = rec.Id,
+                             Name = rec.Name,
+                             Photo = rec.Photo,
+                             Description = rec.Description,
+                             CategoryId = rec.CategoryId,
+                             Category = category.Name,
+                             CookingMethodId = rec.CookingMethodId,
+                             CookingMethod = cookingMethod.Name,
+                             Ingredients = ingredients,
+                         };
+
+            return await recipe.FirstOrDefaultAsync(ct);
+        }
+
         public async Task<IEnumerable<RecipeReadModel>> GetFilteredRecipe(GetFilteredRecipesQuery request, CancellationToken ct)
         {
             var result = _context.Recipes.AsNoTracking()
@@ -24,6 +52,7 @@ namespace Infrastructure.Repositories
                 {
                     Id = x.Id,
                     Name = x.Name,
+                    Photo = x.Photo,
                     Description= x.Description,
                     CategoryId= x.CategoryId,
                     CookingMethodId = x.CookingMethodId,
@@ -62,11 +91,12 @@ namespace Infrastructure.Repositories
                 {
                     Id = r.Id,
                     Name = r.Name,
+                    Photo = r.Photo,
                     Description = r.Description,
                     CategoryId = r.CategoryId,
-                    Category = category.Name,
+                    Category = category == null ? null : category.Name,
                     CookingMethodId = r.CookingMethodId,
-                    CookingMethod = cookingMethod.Name,
+                    CookingMethod = cookingMethod == null ? null : cookingMethod.Name,
                     Ingredients = ingredients
                         .Where(ri => ri.RecipeId == r.Id)
                         .Select(ri => new Ingredient { Id = ri.ingredient.Id, Name = ri.ingredient.Name })

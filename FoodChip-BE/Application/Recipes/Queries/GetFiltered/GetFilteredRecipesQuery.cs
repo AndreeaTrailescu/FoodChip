@@ -1,7 +1,7 @@
 ﻿using Application.DTOs;
 using MediatR;
 
-namespace Application.Recipes.Queries
+namespace Application.Recipes.Queries.GetFiltered
 {
     public class GetFilteredRecipesQuery : IRequest<IEnumerable<RecipeReadModel>>
     {

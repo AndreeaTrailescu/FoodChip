@@ -18,6 +18,7 @@ namespace Infrastructure.Repositories
         public async Task<IEnumerable<Ingredient>> GetAll(CancellationToken ct)
         {
             return await _context.Ingredients.AsNoTracking()
+                .OrderBy(x => x.Name)
                 .ToListAsync(ct);
         }
     }

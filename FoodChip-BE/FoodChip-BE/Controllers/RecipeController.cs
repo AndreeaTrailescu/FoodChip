@@ -1,4 +1,5 @@
-﻿using Application.Recipes.Queries;
+﻿using Application.Recipes.Queries.GetById;
+using Application.Recipes.Queries.GetFiltered;
 using AutoMapper;
 using FoodChip_BE.DTOs.Recipes;
 using MediatR;
@@ -21,13 +22,23 @@ namespace FoodChip_BE.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost]
-        public async Task<IEnumerable<RecipeGetModel>> GetFiltered(RecipeSearchModel requestModel)
+        [HttpGet]
+        public async Task<IEnumerable<RecipeGetModel>> GetFiltered([FromQuery]RecipeSearchModel requestModel)
         {
             var request = _mapper.Map<GetFilteredRecipesQuery>(requestModel);
             var result = await _mediator.Send(request);
 
             return _mapper.Map<IEnumerable<RecipeGetModel>>(result);
+        }
+
+        [HttpGet]
+        [Route("{recipeId}")]
+        public async Task<RecipeGetModel> GetById(int recipeId)
+        {
+            var query = new GetRecipeByIdQuery { RecipeId = recipeId };
+            var result = await _mediator.Send(query);
+
+            return _mapper.Map<RecipeGetModel>(result);
         }
     }
 }

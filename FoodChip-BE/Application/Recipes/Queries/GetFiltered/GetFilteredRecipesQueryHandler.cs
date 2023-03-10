@@ -4,7 +4,7 @@ using Application.Interfaces;
 using Domain;
 using MediatR;
 
-namespace Application.Recipes.Queries
+namespace Application.Recipes.Queries.GetFiltered
 {
     public class GetFilteredRecipesQueryHandler : IRequestHandler<GetFilteredRecipesQuery, IEnumerable<RecipeReadModel>>
     {
