@@ -10,5 +10,6 @@ namespace FoodChip_BE.DTOs.Recipes
         public string Category { get; set; }
         public string CookingMethod { get; set; }
         public IEnumerable<IngredientGetModel> Ingredients { get; set; }
+        public string? Photo { get; set; }
     }
 }

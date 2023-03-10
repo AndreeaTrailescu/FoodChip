@@ -18,6 +18,7 @@ namespace Infrastructure.Repositories
         public async Task<IEnumerable<Category>> GetAll(CancellationToken ct)
         {
             return await _context.Categories.AsNoTracking()
+                .OrderBy(c => c.Name)
                 .ToListAsync(ct);
         }
 

@@ -18,6 +18,7 @@ namespace Infrastructure.Repositories
         public async Task<IEnumerable<CookingMethod>> GetAll(CancellationToken ct)
         {
             return await _context.CookingMethods.AsNoTracking()
+                .OrderBy(c => c.Name)
                 .ToListAsync(ct);
         }
 
