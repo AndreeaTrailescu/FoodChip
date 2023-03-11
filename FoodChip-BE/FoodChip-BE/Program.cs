@@ -34,6 +34,9 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICookingMethodRepository, CookingMethodRepository>();
 builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 
+//Apply Migrations
+builder.Services.AddHostedService<DatabaseMigrationsService>();
+
 var app = builder.Build();
 
 //Exception Middleware
