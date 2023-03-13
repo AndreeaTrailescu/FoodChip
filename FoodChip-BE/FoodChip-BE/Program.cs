@@ -2,7 +2,6 @@ using Application;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using MediatR;
-using System.Reflection;
 using Application.Interfaces;
 using Infrastructure.Repositories;
 using FoodChip_BE.Middleware;
@@ -36,6 +35,17 @@ builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 
 //Apply Migrations
 builder.Services.AddHostedService<DatabaseMigrationsService>();
+
+//Cors
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
