@@ -1,0 +1,190 @@
+[
+  {
+    "Conditions": [
+      {
+        "Name": "ingredient",
+        "Value": "Butter"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Broth"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Broccoli"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Flour"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Milk"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Butter"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Pepper"
+      }
+    ],
+    "Action": {
+      "Name": "recipe",
+      "Value": "Best Cream Of Broccoli Soup"
+    }
+  },
+  {
+    "Conditions": [
+      {
+        "Name": "ingredient",
+        "Value": "Butter"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Potatoes"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Green Onions"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Flour"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Milk"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Cheese"
+      }
+    ],
+    "Action": {
+      "Name": "recipe",
+      "Value": "Baked Potato Soup"
+    }
+  },
+  {
+    "Conditions": [
+      {
+        "Name": "ingredient",
+        "Value": "Ziti Pasta"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Beef"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Cheese"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Flour"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Milk"
+      }
+    ],
+    "Action": {
+      "Name": "recipe",
+      "Value": "Baked Ziti"
+    }
+  },
+  {
+    "Conditions": [
+      {
+        "Name": "ingredient",
+        "Value": "Flour"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Baking Powder"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Sugar"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Salt"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Butter"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Milk"
+      }
+    ],
+    "Action": {
+      "Name": "recipe",
+      "Value": "Homemade Dumplings"
+    }
+  },
+  {
+    "Conditions": [
+      {
+        "Name": "ingredient",
+        "Value": "Salt"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Eggs"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "White Wine Vinegar"
+      }
+    ],
+    "Action": {
+      "Name": "recipe",
+      "Value": "Poached eggs"
+    }
+  },
+  {
+    "Conditions": [
+      {
+        "Name": "ingredient",
+        "Value": "Porridge Oats"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Baking Powder"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Banana"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Honey"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Eggs"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Cinnamon"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Chocolate Chips"
+      },
+      {
+        "Name": "ingredient",
+        "Value": "Flour"
+      }
+    ],
+    "Action": {
+      "Name": "recipe",
+      "Value": "Baked oats"
+    }
+  }
+]

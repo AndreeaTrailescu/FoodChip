@@ -25,7 +25,7 @@ namespace FoodChip_BE.Controllers
         [HttpGet]
         public async Task<IEnumerable<RecipeGetModel>> GetFiltered([FromQuery]RecipeSearchModel requestModel)
         {
-            var request = _mapper.Map<GetFilteredRecipesQuery>(requestModel);
+            var request = _mapper.Map<GetRecipesQuery>(requestModel);
             var result = await _mediator.Send(request);
 
             return _mapper.Map<IEnumerable<RecipeGetModel>>(result);
