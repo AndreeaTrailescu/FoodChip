@@ -23,11 +23,19 @@
       },
       {
         "Name": "ingredient",
-        "Value": "Butter"
+        "Value": "Bread"
       },
       {
         "Name": "ingredient",
         "Value": "Pepper"
+      },
+      {
+        "Name": "cooking method",
+        "Value": "Boiling"
+      },
+      {
+        "Name": "category",
+        "Value": "Lunch Recipes"
       }
     ],
     "Action": {
@@ -60,6 +68,14 @@
       {
         "Name": "ingredient",
         "Value": "Cheese"
+      },
+      {
+        "Name": "cooking method",
+        "Value": "Baking"
+      },
+      {
+        "Name": "category",
+        "Value": "Lunch Recipes"
       }
     ],
     "Action": {
@@ -88,6 +104,14 @@
       {
         "Name": "ingredient",
         "Value": "Milk"
+      },
+      {
+        "Name": "cooking method",
+        "Value": "Boiling"
+      },
+      {
+        "Name": "category",
+        "Value": "Dinner Recipes"
       }
     ],
     "Action": {
@@ -115,11 +139,19 @@
       },
       {
         "Name": "ingredient",
-        "Value": "Butter"
+        "Value": "Bread"
       },
       {
         "Name": "ingredient",
         "Value": "Milk"
+      },
+      {
+        "Name": "cooking method",
+        "Value": "Boiling"
+      },
+      {
+        "Name": "category",
+        "Value": "Dinner Recipes"
       }
     ],
     "Action": {
@@ -140,6 +172,14 @@
       {
         "Name": "ingredient",
         "Value": "White Wine Vinegar"
+      },
+      {
+        "Name": "cooking method",
+        "Value": "Boiling"
+      },
+      {
+        "Name": "category",
+        "Value": "Breakfast Recipes"
       }
     ],
     "Action": {
@@ -180,6 +220,14 @@
       {
         "Name": "ingredient",
         "Value": "Flour"
+      },
+      {
+        "Name": "cooking method",
+        "Value": "Baking"
+      },
+      {
+        "Name": "category",
+        "Value": "Breakfast Recipes"
       }
     ],
     "Action": {
