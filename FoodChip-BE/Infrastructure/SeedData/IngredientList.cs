@@ -13,7 +13,7 @@ namespace Infrastructure.SeedData
                 new Ingredient { Id = 3, Name = "Broccoli" },
                 new Ingredient { Id = 4, Name = "Flour" },
                 new Ingredient { Id = 5, Name = "Milk" },
-                new Ingredient { Id = 6, Name = "Butter" },
+                new Ingredient { Id = 6, Name = "Bread" },
                 new Ingredient { Id = 7, Name = "Pepper" },
                 new Ingredient { Id = 8, Name = "Bacon" },
                 new Ingredient { Id = 9, Name = "Potatoes" },
