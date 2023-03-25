@@ -10,7 +10,7 @@ namespace FoodChip_BE.Profiles
         public RecipeProfile()
         {
             CreateMap<RecipeReadModel, RecipeGetModel>();
-            CreateMap<RecipeSearchModel, GetFilteredRecipesQuery>();
+            CreateMap<RecipeSearchModel, GetRecipesQuery>();
         }
     }
 }
