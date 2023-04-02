@@ -4,14 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import IconButton from '@mui/material/IconButton';
-import CheckIcon from '@mui/icons-material/Check';
-import ClearIcon from '@mui/icons-material/Clear';
 import './RecipeCard.css';
-import api from "../../../Services/api";
-import { grey, red } from "@mui/material/colors";
 
 const RecipeCard = ({recipe}) => {
     const pathname = window.location.pathname;

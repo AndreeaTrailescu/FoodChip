@@ -61,7 +61,7 @@ const SearchIngredientsPage = () => {
         <NavBar />
         <Grid container justifyContent="flex-start" style={{paddingLeft: '40px', paddingRight: '40px', paddingTop: '30px'}}>
             <Grid item container xs={12} >
-            <Grid item xs={8} style={{paddingRight: '30px'}}>
+            <Grid item xs={12} style={{paddingRight: '30px'}}>
             <Autocomplete
             multiple
             id="tags-standard"
@@ -78,7 +78,7 @@ const SearchIngredientsPage = () => {
             )}
         />
             </Grid>
-            <Grid item xs={2} style={{paddingRight: '30px'}}>
+            <Grid item xs={3} style={{paddingRight: '30px'}}>
             <Autocomplete
             id="tags-standard"
             options={categories}
@@ -89,13 +89,13 @@ const SearchIngredientsPage = () => {
             <TextField  
                 {...params}
                 variant="standard"
-                label="Choose category"
+                label="Choose a category"
                 placeholder="Categories"
             />
             )}
         />
             </Grid>
-            <Grid item xs={2} style={{paddingRight: '30px'}}>
+            <Grid item xs={5} style={{paddingRight: '30px'}}>
             <Autocomplete
             id="tags-standard"
             options={cookingMethods}
@@ -106,13 +106,13 @@ const SearchIngredientsPage = () => {
             <TextField  
                 {...params}
                 variant="standard"
-                label="Choose cooking method"
+                label="Choose a cooking method"
                 placeholder="Cooking Methods"
             />
             )}
         />
             </Grid>
-            <Grid item xs={1} style={{paddingTop: '10px'}}>
+            <Grid item xs={4} style={{paddingTop: '12px', alignItems: 'center'}}>
                 <Button variant="contained" onClick={handleSearch} style={{background: '#FEA150'}}>Search</Button>
             </Grid>
             </Grid>
