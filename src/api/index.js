@@ -12,10 +12,10 @@ export const getRecipes = (categoryId, cookingMethodId, ingredientIds) => {
         path = path.concat(`CategoryId=${categoryId}`);
     }
     if (categoryId != null && cookingMethodId != null){
-        path = path.concat(`&CookingMethoId=${cookingMethodId}`);
+        path = path.concat(`&CookingMethodId=${cookingMethodId}`);
     }
     if (categoryId == null && cookingMethodId != null){
-        path = path.concat(`?CookingMethoId=${cookingMethodId}`);
+        path = path.concat(`CookingMethodId=${cookingMethodId}`);
     }
     ingredientIds.map(id => {
         path = path.concat(`&IngredientIds=${id}`)

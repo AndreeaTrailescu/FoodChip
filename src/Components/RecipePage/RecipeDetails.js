@@ -14,7 +14,7 @@ const RecipeDetails = ({id}) => {
         .catch(function (error) {
             console.log(error);
         });
-    });
+    }, []);
 
     return(
         <>
